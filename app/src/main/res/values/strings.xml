@@ -75,4 +75,10 @@
     <string name="not_delete_movie_success">Not delete movie</string>
     <string name="deverlopping">Deverlopping</string>
     <string name="goto_favorites">Go to favorites</string>
+    <string name="title_activity_movie_details_ativity">MovieDetailsAtivity</string>
+    <string name="tab_text_1">Over View</string>
+    <string name="tab_text_2">Trailers</string>
+    <string name="tab_text_3">Product Companies</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 </resources>

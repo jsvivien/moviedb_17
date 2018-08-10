@@ -23,11 +23,16 @@
             android:name=".screen.search.SearchActivity"
             android:theme="@style/AppThemeNoActionBar" />
         <activity
-            android:name=".screen.detail_tv.DetailActivity"
+            android:name=".screen.detail_tv.TvDetailActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".screen.trailer.TrailerActivity"
             android:screenOrientation="landscape" />
-        <activity android:name=".screen.detail_movie.MovieDetailActivity" />
+        <activity
+            android:name=".screen.detail_movie.MovieDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screen.detail_movie.MovieDetailsAtivity"
+            android:theme="@style/AppThemeNoActionBar" />
     </application>
 </manifest>

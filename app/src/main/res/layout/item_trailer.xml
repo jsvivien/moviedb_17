@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/dp_40">
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_8dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="@dimen/dp_64"
+        android:layout_height="@dimen/dp_64"
+        android:src="@drawable/ic_play_24dp" />
 
     <TextView
         android:id="@+id/text_trailer_name"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/dp_8dp"
-        android:background="@android:color/holo_purple"
         android:gravity="center_vertical"
         android:paddingLeft="@dimen/dp_8dp"
-        android:singleLine="true"
         android:text="@string/recommendations"
-        android:textColor="@android:color/black"
-        android:textSize="@dimen/sp_18" />
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_15" />
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
