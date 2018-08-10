@@ -128,4 +128,8 @@
         <item name="android:textColor">@color/color_white</item>
         <item name="android:textAllCaps">false</item>
     </style>
+
+    <style name="AppThemeNoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppThemeNoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

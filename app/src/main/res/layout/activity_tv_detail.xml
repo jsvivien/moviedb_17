@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.admin.moviebd.screen.detail_tv.DetailActivity">
+    tools:context="com.example.admin.moviebd.screen.detail_tv.TvDetailActivity">
 
     <FrameLayout
+        android:id="@+id/frame_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -41,7 +42,7 @@
                 android:paddingLeft="@dimen/dp_12">
 
                 <TextView
-                    android:id="@+id/text_nameVideo"
+                    android:id="@+id/text_tv_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text=""
@@ -50,10 +51,10 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/text_firstAirDate"
+                    android:id="@+id/text_date"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/text_nameVideo"
+                    android:layout_below="@id/text_tv_name"
                     android:hint=""
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/sp_15"
@@ -63,7 +64,7 @@
                     android:id="@+id/linear_vote"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/text_firstAirDate"
+                    android:layout_below="@id/text_date"
                     android:orientation="horizontal">
 
                     <TextView
@@ -74,7 +75,7 @@
                         android:textSize="@dimen/sp_18" />
 
                     <TextView
-                        android:id="@+id/text_voteAverage"
+                        android:id="@+id/text_vote"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@android:color/white"
@@ -89,7 +90,7 @@
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/text_txtGenres"
+                    android:id="@+id/text_genre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/linear_vote"
@@ -101,7 +102,7 @@
                     android:id="@+id/text_genres"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/text_txtGenres"
+                    android:layout_below="@id/text_genre"
                     android:paddingLeft="@dimen/dp_12"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/sp_15"
@@ -141,7 +142,9 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@id/frame_header"
+        android:background="@color/color_black_70">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -149,21 +152,30 @@
             android:orientation="vertical"
             android:padding="@dimen/dp_8dp">
 
-
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/over_view"
-                android:textColor="@android:color/black"
-                android:textSize="@dimen/sp_20"
-                android:textStyle="bold" />
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_8dp">
 
-            <TextView
-                android:id="@+id/text_overView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@android:color/black"
-                android:textSize="@dimen/sp_15" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/over_view"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/sp_20"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_overview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_light_blue"
+                    android:paddingLeft="@dimen/dp_8dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/sp_15" />
+            </LinearLayout>
 
             <android.support.v7.widget.CardView
                 style="@style/CardViewAll"
@@ -258,7 +270,7 @@
                 style="@style/CardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dp_8dp">
+                android:layout_marginTop="@dimen/dp_8dp">
 
                 <RelativeLayout
                     android:id="@+id/relative_recommendations"
@@ -286,4 +298,8 @@
 
         </LinearLayout>
     </ScrollView>
-</LinearLayout>
+
+    <include
+        android:id="@+id/dialog_loading"
+        layout="@layout/dialog_loading" />
+</RelativeLayout>
