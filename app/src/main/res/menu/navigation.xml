@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_overview"
+        android:icon="@drawable/ic_view_24dp"
+        android:title="Over View" />
+
+    <item
+        android:id="@+id/navigation_trailer"
+        android:icon="@drawable/ic_video_24dp"
+        android:title="Trailer" />
+
+    <item
+        android:id="@+id/navigation_company"
+        android:icon="@drawable/ic_company_24dp"
+        android:title="Company" />
+
+</menu>
